@@ -1,6 +1,6 @@
-import cairo
+     import cairo
 
-def text_to_image(text, image_path, font_size=12, font_color=(0, 0, 0), bg_color=(1, 1, 1), width=400, height=200):
+    def text_to_image(text, image_path, font_size=12, font_color=(0, 0, 0), bg_color=(1, 1, 1), width=400, height=200):
     surface = cairo.ImageSurface(cairo.FORMAT_ARGB32, width, height)
     ctx = cairo.Context(surface)
     
@@ -32,12 +32,12 @@ def text_to_image(text, image_path, font_size=12, font_color=(0, 0, 0), bg_color
     # Save image
     surface.write_to_png(image_path)
 
-# Prompt user for input
-text = input("Enter the text to be drawn on the image: ")
-font_size = int(input("Enter the font size: "))
-font_color = tuple(map(int, input("Enter the font color as RGB values (comma-separated): ").split(',')))
-bg_color = tuple(map(int, input("Enter the background color as RGB values (comma-separated): ").split(',')))
-image_path = input("Enter the image path (e.g., output.png): ")
+    # Prompt user for input
+    text = input("Enter the text to be drawn on the image: ")
+    font_size = int(input("Enter the font size: "))
+    font_color = tuple(map(int, input("Enter the font color as RGB values (comma-separated): ").split(',')))
+    bg_color = tuple(map(int, input("Enter the background color as RGB values (comma-separated): ").split(',')))
+    image_path = input("Enter the image path (e.g., output.png): ")
 
-# Call text_to_image function with user input
-text_to_image(text, image_path, font_size, font_color, bg_color, width=600, height=300)
+    # Call text_to_image function with user input
+    text_to_image(text, image_path, font_size, font_color, bg_color, width=600, height=300)
